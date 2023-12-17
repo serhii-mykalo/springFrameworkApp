@@ -1,7 +1,9 @@
 package org.example;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Computer {
     private int id;
     private MusicPlayer musicPlayer;
@@ -14,9 +16,7 @@ public class Computer {
 
     @Override
     public String toString() {
-        return "Computer{" +
-                "id=" + id +
-                ", musicPlayer=" + musicPlayer +
-                '}';
+        return "Computer " + id +
+                ", " + musicPlayer.playMusic();
     }
 }
